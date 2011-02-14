@@ -160,7 +160,6 @@
         UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController: navVC];
         popover.popoverContentSize = CGSizeMake(320, 480);
 
-        // TODO - position correctly in web view
         [popover presentPopoverFromRect: CGRectMake(position.x, position.y, 0.0f, 0.0f) 
                                  inView: self.view
                permittedArrowDirections: UIPopoverArrowDirectionAny 
