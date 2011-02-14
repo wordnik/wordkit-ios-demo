@@ -1,0 +1,99 @@
+/*
+ * Copyright Wordnik, Inc. 2010. All rights reserved.
+ */
+
+body {
+    font-size: 15px;
+}
+
+h1, 
+h2 {
+    font: 1.75em Georgia;
+    line-height: 1.2;
+    margin: 20px 0 10px;
+    padding-right: 28px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+p.documentNavigation a {
+    font-size: 14px;
+}
+
+.section {
+    margin: 20px 10px 20px 10px;
+}
+
+.section_content {
+    min-height: 0;
+    margin-bottom: 20px;
+}
+
+
+/**
+ * Introduction
+ */
+#introduction.section h1, 
+#introduction.section h2, 
+#introduction.section p.documentNavigation {
+    margin-right: 10px;
+}
+
+#introduction.section {
+    margin-top: 20px;
+}
+
+#introduction.section h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#introduction_wordCloud { 
+    background: url("images/heart_large_iphone.png") top left no-repeat;
+    padding: 25px 0 0 25px;
+    margin: 10px 0 5px 0;
+}
+
+#introduction_wordCloud .cloud {
+    padding: 5px;
+    padding-right: 0;
+}
+
+#introduction_wordCloud .cloud p {
+    font-size: 14.5px;
+    width: 248px;
+    padding: 6px 10px;
+}
+
+p#doubleTapInstruct {
+    font-size: 13px;
+    width: 248px;
+    margin: 0 10px 20px 0;
+}
+
+/**
+ * Overview
+ */
+#overview.section p.intro {
+    background: none;
+    padding-bottom: 0;
+     
+}
+
+/**
+ * Wordnik SDK
+ */
+#wordnikSDK.section p.visualExample {
+   padding-bottom: 357px; /* height of img + 18px */
+}
+
+#wordnikSDK.section p#selectionExample {
+    background-image: url("images/select_iphone.png");
+    padding-bottom: 222px; /* height of img + 18px */
+}
+
+#wordnikSDK.section p#definitionExample { background-image: url("images/definitions_iphone.png");}
+#wordnikSDK.section p#thesaurusExample { background-image: url("images/related_iphone.png");}
+#wordnikSDK.section p#examplesExample { background-image: url("images/examples_iphone.png");}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <title>Wordnik iOS SDK Demo App</title>
+        <link type="text/css" href="../demo.css" rel="stylesheet"/>
+        <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="../demo_iphone.css" />
+        <script type="text/javascript" src="../demo.js"/>
+    </head>
+    
+    <body>
+        
+        <!-- The Wordnik SDKs -->
+        <div id="wordnikSDK" class="section">
+            <div class="section_content">
+            
+                <h2>UI SDK</h2>
+                <p>
+                    The UI SDK works with iOS apps (<em>iPhone</em> or <em>iPad</em>) to provide lookup options for 
+                    text selected within the app. When text is selected in an implementing app, a 'Look Up' option 
+                    appears next to the standard copy/paste select options. When the 'Look Up' option is selected a 
+                    window appears displaying:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Definitions</strong> of the selected word or words
+                    </li>
+                    <li>
+                        <strong>Thesaurus</strong> data such as synonyms and antonyms
+                    </li>
+                    <li>
+                        <strong>Example sentences</strong> displaying real-world uses of the selected text
+                    </li>
+                </ul>
+
+                <!-- save this for the next rev, since personalized features might not be in first version
+                <p>
+                    In addition to dictionary lookup, the UI SDK provides the ability to mark words as 'favorites,' and 
+                    to create word lists and add words to them. Users don't need to create a Wordnik account to use 
+                    these features, though they have the option of doing so (or connecting the app to an existing 
+                    Wordnik account), in which case favorites or lists created in an implementing app are visible when 
+                    they log onto Wordnik.com.
+                </p>
+                -->
+
+                <h2>Data SDK</h2>
+                <p>
+					The Data SDK is an intelligent and fully supported Objective-C wrapper around Wordnik's RESTful API. 
+					It can be used with either iOS or Mac OS apps. The UI SDK relies on the Data SDK, but if you're 
+					building a Mac OS app, or need to customize the UI of your iOS app beyond what is possible with 
+					Wordnik's UI SDK, the Data SDK can be used on its own.  It supports API request batching, which 
+					can significantly speed up access to the Wordnik API from mobile devices.
+                </p>
+
+                <h2>How It Works In Your App</h2>
+                <ol>
+                    <li>
+                        <h3>Select</h3>
+                        <p id="selectionExample" class="visualExample">
+                            Highlight text in your app and choose the 'Look up' option.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Look up</h3>
+                        <p>
+                            When a word is looked up, you will see traditional
+                            dictionary definitions where available, alongside example sentences and
+                            thesaurus data (related words).
+                        </p>
+                        <ul>
+                            <li>
+                                <h4>Definitions</h4>
+                                <p id="definitionExample" class="visualExample">
+                                    Definitions come from the Wordnik API, which provides data from the American 
+									Heritage Dictionary, the Century Dictionary, Wiktionary, WordNet, and the GNU 
+									Webster's dictionary.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Thesaurus</h4>
+                                <p id="thesaurusExample" class="visualExample">
+                                    Synonyms, antonyms, and other -nyms come from the Allen Thesaurus, Wiktionary, and 
+                                    WordNet.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Examples</h4>
+                                <p id="examplesExample" class="visualExample">
+                                    Example sentences come from Wordnik's enormous database of nearly one billion 
+									example sentences. 
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--
+                    <li>
+                        <h3>Favorite</h3>
+                        <p>
+                            Any word can be added or removed from the app user's list of favorites. The favorites list 
+                            is either specific to the device, or to the Wordnik account of the user if they've logged 
+                            in.
+                        </p>
+                        <img src="images/favorite.png" alt="" />
+                    </li>
+                    <li>
+                        <h3>List</h3>
+                        <p>
+                            Words can be added and removed from lists. Users can create new lists, or access their 
+                            existing lists from Wordnik.com if they've logged in.
+                        </p>
+                        <img src="images/list.png" alt="" />
+                    </li>
+                    <li>
+                        <h3>Accounts</h3>
+                        <p>
+                            A Wordnik account is not required to use any of the features of the SDK. If personalized 
+                            features are used by someone without a Wordnik account, an anonymous account is created on 
+                            Wordnik's system using a unique device identifier, but no other personal information. That 
+                            anonymous account can be claimed by a user and connected to a public Wordnik account at any 
+                            later date.
+                        </p>
+                        <img src="images/account.png" alt="" />
+                    </li>
+                    <li>
+                        Sign in to an existing Wordnik account
+                        <img src="images/" alt="" />
+                    </li>
+                    <li>
+                        Link your device to an account
+                        <img src="images/" alt="" />
+                    </li>
+                    -->
+                </ol>
+
+                <h2>How It Works In Your Code</h2>
+                <ol>
+                    <li>
+                        <a href="http://developer.wordnik.com/libraries">Download the SDK</a>
+                    </li>
+                    <li>
+                        Add a <code>UIMenuItem</code> in your interface code and initialize the Wordnik library
+					</li>
+                    <li>Call the library with the selected word and show the UI element</li>
+                </ol>
+				<p>
+					The UI SDK supports UIWebView, UITextView and can easily be used with custom UI controllers. 
+					You can choose to enable lookup functionality on some or all of your text. See the iOS SDK 
+					Recipes section of our Developer site for complete examples.
+				</p>
+
+                <h2>Download the SDK</h2>
+                <p>
+                    You can find the SDK, as well as documentation and other information, at 
+                    <a href="http://developer.wordnik.com/">http://developer.wordnik.com/</a>.  Usage 
+					of the Wordnik API requires an API key, which can be obtained from the signup section of
+					our developer site.
+                </p>
+            </div><!-- end .section_content -->
+            
+            <div class="clearFloats"><!-- clear --></div>
+            
+            <!-- Navigation -->
+            <p class="documentNavigation">
+                <a class="previous" href="../01-Overview/index.html">
+                    &larr; Overview
+                </a>
+                <a class="next" href="../03-More/index.html">
+                    Next: More Info &amp; Links &rarr;
+                </a>
+            </p>
+        </div><!-- end #wordnikSDK.section -->
+    </body>
+</html>

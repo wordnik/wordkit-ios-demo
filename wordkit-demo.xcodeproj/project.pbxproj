@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0538C752129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538C750129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m */; };
+		0538C753129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0538C751129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib */; };
+		0538C8AB129B19B10024F4C3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0538C8AA129B19B10024F4C3 /* CoreText.framework */; };
+		1D3623260D0F684500981E51 /* WordnikDemoAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* WordnikDemoAppAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* WordnikDemoAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* WordnikDemoAppViewController.xib */; };
+		28D7ACF80DDB3853001CB0EB /* WordnikDemoAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* WordnikDemoAppViewController.m */; };
+		DF021A47129ABD46003823B0 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF021A46129ABD46003823B0 /* title_logo@2x.png */; };
+		DF38534B12970824001D21EB /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF38534A12970824001D21EB /* title_logo.png */; };
+		DF9521DA129B0F9600E8E5F7 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D4129B0F9600E8E5F7 /* Icon-72.png */; };
+		DF9521DB129B0F9600E8E5F7 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D5129B0F9600E8E5F7 /* Icon-Small-50.png */; };
+		DF9521DC129B0F9600E8E5F7 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D6129B0F9600E8E5F7 /* Icon-Small.png */; };
+		DF9521DD129B0F9600E8E5F7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D7129B0F9600E8E5F7 /* Icon-Small@2x.png */; };
+		DF9521DE129B0F9600E8E5F7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D8129B0F9600E8E5F7 /* Icon.png */; };
+		DF9521DF129B0F9600E8E5F7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D9129B0F9600E8E5F7 /* Icon@2x.png */; };
+		DF9597A01291D85F007E3C9F /* html in Resources */ = {isa = PBXBuildFile; fileRef = DF9597931291D85F007E3C9F /* html */; };
+		DFA6953012946B8C00D8C8ED /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA6952F12946B8C00D8C8ED /* MainWindow.xib */; };
+		EA77FCB51308F06A00E85BDE /* WordnikUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77FCB41308F06A00E85BDE /* WordnikUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0538C74F129B0DFF0024F4C3 /* WordnikDemoTOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoTOCViewController.h; sourceTree = "<group>"; };
+		0538C750129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordnikDemoTOCViewController.m; sourceTree = "<group>"; };
+		0538C751129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordnikDemoTOCViewController.xib; sourceTree = "<group>"; };
+		0538C7B1129B13F00024F4C3 /* WordnikDemoTOCViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoTOCViewControllerDelegate.h; sourceTree = "<group>"; };
+		0538C807129B172A0024F4C3 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wordnik.framework; sourceTree = "<group>"; };
+		0538C8AA129B19B10024F4C3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* WordnikDemoAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoAppAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* WordnikDemoAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordnikDemoAppAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Wordnik SDK Documentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordnik SDK Documentation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* WordnikDemoAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordnikDemoAppViewController.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* WordnikDemoAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoAppViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* WordnikDemoAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordnikDemoAppViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF021A46129ABD46003823B0 /* title_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_logo@2x.png"; sourceTree = "<group>"; };
+		DF38534A12970824001D21EB /* title_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_logo.png; sourceTree = "<group>"; };
+		DF9521D4129B0F9600E8E5F7 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		DF9521D5129B0F9600E8E5F7 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		DF9521D6129B0F9600E8E5F7 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		DF9521D7129B0F9600E8E5F7 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		DF9521D8129B0F9600E8E5F7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DF9521D9129B0F9600E8E5F7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		DF9597931291D85F007E3C9F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		DFA6952E12946B2900D8C8ED /* WordnikDemoApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WordnikDemoApp-Info.plist"; sourceTree = "<group>"; };
+		DFA6952F12946B8C00D8C8ED /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		EA77FCB41308F06A00E85BDE /* WordnikUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordnikUI.framework; path = "iOS Framework/WordnikUI.framework"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				0538C8AB129B19B10024F4C3 /* CoreText.framework in Frameworks */,
+				EA77FCB51308F06A00E85BDE /* WordnikUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0538C7F3129B16FB0024F4C3 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				0538C807129B172A0024F4C3 /* Wordnik.framework */,
+				EA77FCB41308F06A00E85BDE /* WordnikUI.framework */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		0538C83F129B17320024F4C3 /* Table of Contents */ = {
+			isa = PBXGroup;
+			children = (
+				0538C74F129B0DFF0024F4C3 /* WordnikDemoTOCViewController.h */,
+				0538C750129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m */,
+				0538C7B1129B13F00024F4C3 /* WordnikDemoTOCViewControllerDelegate.h */,
+				0538C751129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib */,
+			);
+			name = "Table of Contents";
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* WordnikDemoAppAppDelegate.h */,
+				1D3623250D0F684500981E51 /* WordnikDemoAppAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* WordnikDemoAppViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* WordnikDemoAppViewController.m */,
+				2899E5210DE3E06400AC0155 /* WordnikDemoAppViewController.xib */,
+				0538C83F129B17320024F4C3 /* Table of Contents */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Wordnik SDK Documentation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				0538C7F3129B16FB0024F4C3 /* Dependencies */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF9521D8129B0F9600E8E5F7 /* Icon.png */,
+				DF9521D9129B0F9600E8E5F7 /* Icon@2x.png */,
+				DF9521D6129B0F9600E8E5F7 /* Icon-Small.png */,
+				DF9521D7129B0F9600E8E5F7 /* Icon-Small@2x.png */,
+				DF9521D5129B0F9600E8E5F7 /* Icon-Small-50.png */,
+				DF9521D4129B0F9600E8E5F7 /* Icon-72.png */,
+				DF021A46129ABD46003823B0 /* title_logo@2x.png */,
+				DF38534A12970824001D21EB /* title_logo.png */,
+				DFA6952E12946B2900D8C8ED /* WordnikDemoApp-Info.plist */,
+				DFA6952F12946B8C00D8C8ED /* MainWindow.xib */,
+				DF9597931291D85F007E3C9F /* html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				0538C8AA129B19B10024F4C3 /* CoreText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Wordnik SDK Documentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Wordnik SDK Documentation" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wordnik SDK Documentation";
+			productName = WordnikDemoApp;
+			productReference = 1D6058910D05DD3D006BFB54 /* Wordnik SDK Documentation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "wordkit-demo" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Wordnik SDK Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2899E5220DE3E06400AC0155 /* WordnikDemoAppViewController.xib in Resources */,
+				DF9597A01291D85F007E3C9F /* html in Resources */,
+				DFA6953012946B8C00D8C8ED /* MainWindow.xib in Resources */,
+				DF38534B12970824001D21EB /* title_logo.png in Resources */,
+				DF021A47129ABD46003823B0 /* title_logo@2x.png in Resources */,
+				0538C753129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib in Resources */,
+				DF9521DA129B0F9600E8E5F7 /* Icon-72.png in Resources */,
+				DF9521DB129B0F9600E8E5F7 /* Icon-Small-50.png in Resources */,
+				DF9521DC129B0F9600E8E5F7 /* Icon-Small.png in Resources */,
+				DF9521DD129B0F9600E8E5F7 /* Icon-Small@2x.png in Resources */,
+				DF9521DE129B0F9600E8E5F7 /* Icon.png in Resources */,
+				DF9521DF129B0F9600E8E5F7 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* WordnikDemoAppAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* WordnikDemoAppViewController.m in Sources */,
+				0538C752129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies\"",
+					"\"$(SRCROOT)/iOS Framework\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Resources/WordnikDemoApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "Wordnik SDK Documentation";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies\"",
+					"\"$(SRCROOT)/iOS Framework\"",
+				);
+				INFOPLIST_FILE = "Resources/WordnikDemoApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "Wordnik SDK Documentation";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wordnik, Inc.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "35603CB2-DBF3-47E3-B6E9-04B216BAB5DE";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wordnik, Inc.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "35603CB2-DBF3-47E3-B6E9-04B216BAB5DE";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+			};
+			name = Release;
+		};
+		EAE1441212F1BB070013F4CA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wordnik, Inc.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "35603CB2-DBF3-47E3-B6E9-04B216BAB5DE";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+			};
+			name = Distribution;
+		};
+		EAE1441312F1BB070013F4CA /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies\"",
+					"\"$(SRCROOT)/iOS Framework\"",
+				);
+				INFOPLIST_FILE = "Resources/WordnikDemoApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "Wordnik SDK Documentation";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Wordnik SDK Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				EAE1441312F1BB070013F4CA /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "wordkit-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				EAE1441212F1BB070013F4CA /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

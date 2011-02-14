@@ -1,0 +1,190 @@
+/*
+ * Copyright Wordnik, Inc. 2010. All rights reserved.
+ */
+
+
+/**
+ * Base Styles
+ */
+* {
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+body {
+	font: 16px Helvetica;
+	line-height: 1.5;
+    display: none;
+}
+
+p, 
+ol, 
+ul {
+    margin-bottom: 16px;
+}
+
+h1, 
+h2 {
+    font: 48px Georgia;
+    line-height: 30px;
+    letter-spacing: .025em;
+    color: #36231E;
+    margin: 30px 0 18px;
+    border-bottom: 1px dotted #AAAAAA;
+    clear: both;
+}
+
+h2 {
+    background: url("images/heart.png") center right no-repeat;
+}
+
+li {
+    margin-left: 25px;
+}
+
+li ul li {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+code {
+    border: 1px dashed #555;
+    background-color:#EEE;
+    padding:8px;
+    margin: 16px 0;
+    display: block;
+}
+
+div.clearFloats {
+    height: 0;
+    width: 0;
+    clear: both;
+}
+
+/* Navigation */
+p.documentNavigation {
+    height: 24px;
+    margin-bottom: 30px;
+}
+
+p.documentNavigation a {
+    font: bold 18px Georgia;
+    color: inherit;
+    background-color: #FEF0AD;
+    text-decoration: none;
+    font-style: italic;
+    padding: 3px 5px;
+}
+
+p.documentNavigation a.next {
+    display: block;
+    float: right;
+}
+
+/**
+ * Layout
+ */
+.section {
+    margin: 20px 20px 40px 20px;
+}
+
+.section_content {
+    margin-bottom: 50px;
+}
+
+/**
+ * Introduction
+ */
+#introduction.section {
+    margin-top: 40px;
+    margin-right: 0;
+}
+
+#introduction.section h1, 
+#introduction.section h2, 
+#introduction.section p.documentNavigation {
+    margin-right: 20px;
+}
+
+#introduction.section h2 {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.2;
+    border: none;
+    background: none;
+    margin-top: 0px;
+}
+
+#introduction_wordCloud {
+    background: url("images/heart_large.png") top left no-repeat;
+    padding: 69px 0 0 72px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+#introduction_wordCloud .cloud {
+    padding: 6px;
+    padding-right: 0;
+    border: 1px dotted #AAAAAA;
+    border-right: none;
+    background-color: white;
+} 
+
+#introduction_wordCloud .cloud p {
+    font-size: 24px;
+    text-align: justify;
+    line-height: 2;
+    width: 510px;
+    padding: 16px 20px;
+    margin: 0;
+    border: 1px dotted #AAAAAA;
+    border-right: none;
+}
+ 
+.cloud em {
+    color: #d73611;
+    font-style: normal;
+}
+
+p#doubleTapInstruct {
+    font: bold 14px Georgia;
+    font-style: italic;
+    color: #767676;
+    width: 510px;
+    margin: 0 20px 70px 0;
+    float: right;
+    clear: both;
+}
+
+body#iPad #introduction_wordCloud .cloud p.smallScreen { display: none;}
+body#iPhone #introduction_wordCloud .cloud p.largeScreen { display: none;}
+
+/**
+ * Overview
+ */
+#overview.section p.intro {
+    background: url("images/iPad_on_back.jpg") center bottom no-repeat;
+    padding-bottom: 480px; /* height of img + 18px */
+     
+}
+
+/**
+ * Wordnik SDK
+ */
+#wordnikSDK.section p.visualExample {
+   padding-bottom: 533px; /* height of img + 18px */
+   background-position: center bottom;
+   background-repeat: no-repeat; 
+}
+
+#wordnikSDK.section p#selectionExample {
+    background-image: url("images/select.png");
+    padding-bottom: 278px; /* height of img + 18px */
+}
+
+#wordnikSDK.section p#definitionExample { background-image: url("images/definitions.png");}
+#wordnikSDK.section p#thesaurusExample { background-image: url("images/related.png");}
+#wordnikSDK.section p#examplesExample { background-image: url("images/examples.png");}
+ 
