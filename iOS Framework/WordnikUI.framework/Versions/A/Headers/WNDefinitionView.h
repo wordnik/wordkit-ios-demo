@@ -4,7 +4,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 #import <WordnikUI/WNDefinitionViewDelegate.h>
 
 #ifdef WORDNIK_PRIVATE
@@ -23,7 +23,7 @@
 @interface WNDefinitionView : UIView {
 @private
     /** The displayed word. */
-    WNWord *_word;
+    WNWordObject *_word;
     
     /** The "powered by:" label to the right of the logo */
     UILabel *_poweredByLabel;
@@ -59,7 +59,7 @@
 - (id) initWithFrame: (CGRect) frame;
 
 /** The displayed word, or nil if none configured. The definition will be derived from this word record. */
-@property(nonatomic, retain) WNWord *word;
+@property(nonatomic, retain) WNWordObject *word;
 
 /** The definition view delegate. The del*/
 @property(nonatomic, assign) id<WNDefinitionViewDelegate> delegate;

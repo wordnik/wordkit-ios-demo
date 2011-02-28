@@ -15,4 +15,7 @@
 
 - (id) initWithWordnikClient: (WNClient *) client;
 
+/** The Wordnik client used during initialization */
+@property(readonly) WNClient *wordnikClient;
+
 @end

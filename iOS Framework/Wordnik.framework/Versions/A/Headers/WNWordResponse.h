@@ -5,24 +5,24 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 #import <Wordnik/WNSpellingSuggestion.h>
 
 @interface WNWordResponse : NSObject {
 @private
     /** The returned word record. */
-    WNWord *_word;
+    WNWordObject *_wordObject;
     
     /** Alternative spelling suggestions as an ordered array of WNSpellingSuggestion instances. Will be empty
      * if alternative spelling suggestions were not either not requested or not available. */
     NSArray *_spellingSuggestions;
 }
 
-+ (id) responseWithWord: (WNWord *) word spellingSuggestions: (NSArray *) spellingSuggestions;
-- (id) initWithWord: (WNWord *) word spellingSuggestions: (NSArray *) spellingSuggestions;
++ (id) responseWithWord: (WNWordObject *) word spellingSuggestions: (NSArray *) spellingSuggestions;
+- (id) initWithWord: (WNWordObject *) word spellingSuggestions: (NSArray *) spellingSuggestions;
 
 /** The returned word record. */
-@property(nonatomic, readonly) WNWord *word;
+@property(nonatomic, readonly) WNWordObject *wordObject;
 
 /** Alternative spelling suggestions as an ordered array of WNSpellingSuggestion instances. Will be empty
  * if alternative spelling suggestions were not requested. */

@@ -6,17 +6,17 @@
 
 #import <Wordnik/WNWordElementRequest.h>
 #import <Wordnik/WNWordDefinitionRequest.h>
-#import <Wordnik/WNWordExampleSentenceRequest.h>
+#import <Wordnik/WNWordExampleRequest.h>
 #import <Wordnik/WNWordRelatedWordsRequest.h>
 #import <Wordnik/WNWordUsageFrequencyRequest.h>
 #import <Wordnik/WNWordTextPronunciationRequest.h>
-#import <Wordnik/WNWordPunctuationFactorRequest.h>
+#import <Wordnik/WNAudioFileMetadataRequest.h>
 #import <Wordnik/WNWordBigramRequest.h>
 
 @interface WNWordRequest : NSObject {
 @private
     /** The requested word. */
-    NSString *_wordString;
+    NSString *_word;
 
     /** Indicates whether the canonical form of the word should be automatically selected. */
     BOOL _requestCanonicalForm;
@@ -28,22 +28,22 @@
     NSArray *_elementRequests;
 }
 
-+ (id) requestWithWordString: (NSString *) wordString elementRequests: (NSArray *) elementRequests;
++ (id) requestWithWord: (NSString *) word elementRequests: (NSArray *) elementRequests;
 
-+ (id) requestWithWordString: (NSString *) wordString
++ (id) requestWithWord: (NSString *) word
         requestCanonicalForm: (BOOL) requestCanonicalForm
   requestSpellingSuggestions: (BOOL) requestSpellingSuggestions
              elementRequests: (NSArray *) elementRequests;
 
-- (id) initWithWordString: (NSString *) wordString elementRequests: (NSArray *) elementRequests;
+- (id) initWithWord: (NSString *) word elementRequests: (NSArray *) elementRequests;
 
-- (id)  initWithWordString: (NSString *) wordString 
+- (id)  initWithWord: (NSString *) word 
       requestCanonicalForm: (BOOL) requestCanonicalForm
 requestSpellingSuggestions: (BOOL) requestSpellingSuggestions
            elementRequests: (NSArray *) elementRequests;
 
 /** The requested word. */
-@property(nonatomic, readonly) NSString *wordString;
+@property(nonatomic, readonly) NSString *word;
 
 /** Indicates whether spelling suggestions should be requested for this word. */
 @property(nonatomic, readonly) BOOL requestSpellingSuggestions;

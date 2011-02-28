@@ -28,8 +28,8 @@
  * Sent when the user selects a new word for additional detail.
  *
  * @param definitionView The sending definition view.
- * @param wordString The word string selected by the user.
+ * @param word The word string selected by the user.
  */
-- (void) definitionView: (WNDefinitionView *) definitionView didSelectWordString: (NSString *) wordString;
+- (void) definitionView: (WNDefinitionView *) definitionView didSelectWordString: (NSString *) word;
 
 @end

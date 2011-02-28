@@ -6,14 +6,12 @@
 #import <Wordnik/WNPartOfSpeech.h>
 #import <Wordnik/WNDefinitionCitation.h>
 #import <Wordnik/WNDefinitionLabel.h>
+#import <Wordnik/WNDictionary.h>
 
 @interface WNDefinition : NSObject {
 @private
-    /** The canonical wordnik identifier for this definition. */
-    NSString *_wordnikId;
-
     /**
-     * Head word. This is the word that should serve as the heading for this definition's
+     * HeadWord. This is the word that should serve as the heading for this definition's
      * entry in the dictionary.
      */
     NSString *_headWord;
@@ -33,26 +31,26 @@
 
     /** The array of labels for this definition, as an array of WNDefinitionLabel instances. */
     NSArray *_labels;
+	
+	WNDictionary *_dictionary;
 }
 
-+ (id) definitionWithWordnikId: (NSString *) wordnikId
-                      headWord: (NSString *) headWord 
-                          text: (NSString *) text 
-                  extendedText: (NSString *) extendedText
-                  partOfSpeech: (WNPartOfSpeech *) partOfSpeech
-                     citations: (NSArray *) citations
-                        labels: (NSArray *) labels;
++ (id) definitionWithHeadWord: (NSString *) headWord 
+						 text: (NSString *) text 
+				 extendedText: (NSString *) extendedText
+				 partOfSpeech: (WNPartOfSpeech *) partOfSpeech
+					citations: (NSArray *) citations
+					   labels: (NSArray *) labels
+				   dictionary: (WNDictionary*)dictionary;
 
-- (id) initWithWordnikId: (NSString *) wordnikId
-                headWord: (NSString *) headWord 
-                    text: (NSString *) text 
-            extendedText: (NSString *) extendedText
-            partOfSpeech: (WNPartOfSpeech *) partOfSpeech
-               citations: (NSArray *) citations
-                  labels: (NSArray *) labels;
+- (id) initWithHeadWord: (NSString *) headWord 
+				   text: (NSString *) text 
+		   extendedText: (NSString *) extendedText
+		   partOfSpeech: (WNPartOfSpeech *) partOfSpeech
+			  citations: (NSArray *) citations
+				 labels: (NSArray *) labels
+			 dictionary: (WNDictionary*)dictionary;
 
-/** The canonical wordnik identifier for this definition. */
-@property(nonatomic, readonly) NSString *wordnikId;
 
 /**
  * Head word. This is the word that should serve as the heading for this definition's
@@ -78,4 +76,6 @@
  * this array will be empty. */
 @property(nonatomic, readonly) NSArray *labels;
 
+/** The source dictionary for this definition.  If not definied, this will be nil */
+@property(nonatomic, readonly) WNDictionary * dictionary;
 @end

@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Wordnik/WNRelatedWord.h>
+#import <Wordnik/WNRelatedWordObject.h>
 
 @interface WNRelatedWordList : NSObject {
 @private

@@ -41,7 +41,14 @@ typedef enum {
      * @todo Should the server always provide more specific error codes so that we can provide less general request
      * errors?
      */
-    WNErrorCodeRequestGeneralError = 5
+    WNErrorCodeRequestGeneralError = 5,
+    
+    /** The request failed due to a database query failure. */
+    WNErrorCodeDatabaseQueryFailed = 6,
+    
+    /** The request failed due to no available data sources. */
+    WNErrorCodeNoDataSourcesAvailable = 7,
+    
 } WNErrorCode;
 
 /*

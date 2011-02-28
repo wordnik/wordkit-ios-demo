@@ -4,50 +4,49 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface WNWordOfTheDayResponse : NSObject {
 @private
     /** The word string. */
-    NSString *_wordString;
+    NSString *_word;
     
     /** The date the entry was published. */
     NSDate *_publishDate;
 
     /** An ordered array of definition strings, formatted for display. */
-    NSArray *_definitionStrings;
+    NSArray *_definitions;
 
     /** An ordered array of usage examples, formatted for display. */
-    NSArray *_usageExampleStrings;
+    NSArray *_usageExamples;
 
     /** An ordered array of notes, formatted for display. */
-    NSArray *_noteStrings;
+    NSArray *_notes;
 }
 
-+ (id) responseWithWordString: (NSString *) wordString
-                  publishDate: (NSDate *) publishDate
-            definitionStrings: (NSArray *) definitionStrings
-          usageExamplestrings: (NSArray *) usageExampleStrings
-                  noteStrings: (NSArray *) noteStrings;
++ (id) responseWithWord: (NSString *) word
+			publishDate: (NSDate *) publishDate
+			definitions: (NSArray *) definitions
+		  usageExamples: (NSArray *) usageExamples
+				  notes: (NSArray *) notes;
 
-- (id) initWithWordString: (NSString *) wordString
-              publishDate: (NSDate *) publishDate
-        definitionStrings: (NSArray *) definitionStrings
-      usageExamplestrings: (NSArray *) usageExampleStrings
-              noteStrings: (NSArray *) noteStrings;
+- (id) initWithWord: (NSString *) word
+		publishDate: (NSDate *) publishDate
+        definitions: (NSArray *) definitions
+      usageExamples: (NSArray *) usageExamples
+			  notes: (NSArray *) notes;
 
 /** The word string. */
-@property(nonatomic, readonly) NSString *wordString;
+@property(nonatomic, readonly) NSString *word;
 
 /** The date the entry was published. */
 @property(nonatomic, readonly) NSDate *publishDate;
 
-/** An ordered array of definition strings, formatted for display. */
-@property(nonatomic, readonly) NSArray *definitionStrings;
+/** An ordered array of definition objects, formatted for display. */
+@property(nonatomic, readonly) NSArray *definitions;
 
 /** An ordered array of usage examples, formatted for display. */
-@property(nonatomic, readonly) NSArray *usageExampleStrings;
+@property(nonatomic, readonly) NSArray *usageExamples;
 
 /** An ordered array of notes, formatted for display. */
-@property(nonatomic, readonly) NSArray *noteStrings;
+@property(nonatomic, readonly) NSArray *notes;
 
 @end

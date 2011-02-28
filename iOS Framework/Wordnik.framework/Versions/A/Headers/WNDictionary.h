@@ -14,6 +14,7 @@
     NSString *_localizedName;
 }
 
++ (WNDictionary *) ahdDictionary;
 + (WNDictionary *) centuryDictionary;
 + (WNDictionary *) wiktionaryDictionary;
 + (WNDictionary *) websterDictionary;

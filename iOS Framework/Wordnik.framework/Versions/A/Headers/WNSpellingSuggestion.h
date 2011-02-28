@@ -8,13 +8,13 @@
 @interface WNSpellingSuggestion : NSObject <NSCopying> {
 @private
     /** The suggested word. */
-    NSString *_wordString;
+    NSString *_word;
 }
 
-+ (id) suggestionWithWordString: (NSString *) wordString;
-- (id) initWithWordString: (NSString *) wordString;
++ (id) suggestionWithWord : (NSString *) word;
+- (id) initWithWord : (NSString *) word;
 
 /** A suggested alternative word. */
-@property(nonatomic, readonly) NSString *wordString;
+@property(nonatomic, readonly) NSString *word;
 
 @end

@@ -50,9 +50,9 @@
 @protocol WNWordDataSource <NSObject>
 
 /**
- * Perform an asynchronous lookup of the provided wordString, providing the WNWordResult to the given
+ * Perform an asynchronous lookup of the provided word, providing the WNWordResult to the given
  * WNWordDataSourceListener.
  */
-- (WNRequestTicket *) wordResponseWithWordString: (NSString *) wordString listener: (id<WNWordDataSourceListener>) listener;
+- (WNRequestTicket *) wordResponseWithWord: (NSString *) word listener: (id<WNWordDataSourceListener>) listener;
 
 @end

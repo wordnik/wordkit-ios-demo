@@ -14,6 +14,8 @@
     NSString *_localizedName;
 }
 
++ (id) notSpecified; // no part of speech specified
+
 + (id) noun;
 + (id) verb;
 + (id) adjective;

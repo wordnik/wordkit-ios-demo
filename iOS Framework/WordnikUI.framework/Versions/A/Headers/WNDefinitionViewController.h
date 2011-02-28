@@ -4,7 +4,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 #import <Wordnik/WNWordDataSource.h>
 
 #import <WordnikUI/WNDefinitionView.h>
@@ -37,7 +37,7 @@
     BOOL _isBusy;
 
     /** The word string to be looked up. */
-    NSString *_wordString;
+    NSString *_word;
     
     /** The word response, or nil if not yet received. */
     WNWordResponse *_wordResponse;
@@ -53,7 +53,7 @@
     WNDefinitionViewController *_subcontroller;
 }
 
-- (id) initWithWordString: (NSString *) wordString dataSource: (id<WNWordDataSource>) dataSource;
+- (id) initWithWord: (NSString *) word dataSource: (id<WNWordDataSource>) dataSource;
 
 /** The object that acts as the data source of the receiving definition view controller. */
 @property(nonatomic, assign) id<WNWordDataSource> dataSource;

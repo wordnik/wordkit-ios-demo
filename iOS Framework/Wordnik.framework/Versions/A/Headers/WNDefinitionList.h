@@ -32,6 +32,7 @@
 
 - (NSArray *) definitionsForPartOfSpeech: (WNPartOfSpeech *) partOfSpeech;
 - (NSArray *) definitionsForHeadWord: (NSString *) headWord;
+- (NSString *)componentsJoinedByString:(NSString *)separator;
 
 /** The source dictionary. */
 @property(nonatomic, readonly) WNDictionary *sourceDictionary;

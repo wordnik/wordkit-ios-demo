@@ -27,7 +27,9 @@
 		DF9521DF129B0F9600E8E5F7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9521D9129B0F9600E8E5F7 /* Icon@2x.png */; };
 		DF9597A01291D85F007E3C9F /* html in Resources */ = {isa = PBXBuildFile; fileRef = DF9597931291D85F007E3C9F /* html */; };
 		DFA6953012946B8C00D8C8ED /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA6952F12946B8C00D8C8ED /* MainWindow.xib */; };
-		EA77FCB51308F06A00E85BDE /* WordnikUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77FCB41308F06A00E85BDE /* WordnikUI.framework */; };
+		EAB03D6513174B1500FA8342 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB03D6413174B1500FA8342 /* libsqlite3.dylib */; };
+		EAB03D6C13174B3300FA8342 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB03D6B13174B3300FA8342 /* SystemConfiguration.framework */; };
+		EAD9C29C131B6D4300FA2A89 /* WordnikUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9C29B131B6D4300FA2A89 /* WordnikUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,6 @@
 		0538C750129B0DFF0024F4C3 /* WordnikDemoTOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordnikDemoTOCViewController.m; sourceTree = "<group>"; };
 		0538C751129B0DFF0024F4C3 /* WordnikDemoTOCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordnikDemoTOCViewController.xib; sourceTree = "<group>"; };
 		0538C7B1129B13F00024F4C3 /* WordnikDemoTOCViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoTOCViewControllerDelegate.h; sourceTree = "<group>"; };
-		0538C807129B172A0024F4C3 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wordnik.framework; sourceTree = "<group>"; };
 		0538C8AA129B19B10024F4C3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* WordnikDemoAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordnikDemoAppAppDelegate.h; sourceTree = "<group>"; };
@@ -58,7 +59,9 @@
 		DF9597931291D85F007E3C9F /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		DFA6952E12946B2900D8C8ED /* WordnikDemoApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WordnikDemoApp-Info.plist"; sourceTree = "<group>"; };
 		DFA6952F12946B8C00D8C8ED /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		EA77FCB41308F06A00E85BDE /* WordnikUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordnikUI.framework; path = "iOS Framework/WordnikUI.framework"; sourceTree = SOURCE_ROOT; };
+		EAB03D6413174B1500FA8342 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EAB03D6B13174B3300FA8342 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EAD9C29B131B6D4300FA2A89 /* WordnikUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WordnikUI.framework; path = "iOS Framework/WordnikUI.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +73,9 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				0538C8AB129B19B10024F4C3 /* CoreText.framework in Frameworks */,
-				EA77FCB51308F06A00E85BDE /* WordnikUI.framework in Frameworks */,
+				EAB03D6513174B1500FA8342 /* libsqlite3.dylib in Frameworks */,
+				EAB03D6C13174B3300FA8342 /* SystemConfiguration.framework in Frameworks */,
+				EAD9C29C131B6D4300FA2A89 /* WordnikUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +85,6 @@
 		0538C7F3129B16FB0024F4C3 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				0538C807129B172A0024F4C3 /* Wordnik.framework */,
-				EA77FCB41308F06A00E85BDE /* WordnikUI.framework */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -165,6 +168,9 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				0538C8AA129B19B10024F4C3 /* CoreText.framework */,
+				EAB03D6413174B1500FA8342 /* libsqlite3.dylib */,
+				EAB03D6B13174B3300FA8342 /* SystemConfiguration.framework */,
+				EAD9C29B131B6D4300FA2A89 /* WordnikUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies\"",
 					"\"$(SRCROOT)/iOS Framework\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Debug-iOS\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Release-iOS\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -274,12 +282,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies\"",
 					"\"$(SRCROOT)/iOS Framework\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Debug-iOS\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Release-iOS\"",
 				);
 				INFOPLIST_FILE = "Resources/WordnikDemoApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
@@ -362,6 +372,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies\"",
 					"\"$(SRCROOT)/iOS Framework\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Debug-iOS\"",
+					"\"$(SRCROOT)/../obj-c-sdk/build/Release-iOS\"",
 				);
 				INFOPLIST_FILE = "Resources/WordnikDemoApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";

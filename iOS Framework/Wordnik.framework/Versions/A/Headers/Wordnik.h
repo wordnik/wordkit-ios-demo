@@ -24,14 +24,6 @@
  */
 
 /**
- * @defgroup functions Functions Reference
- */
-
-/**
- * @defgroup types Data Types Reference
- */
-
-/**
  * @defgroup constants Constants Reference
  */
 
@@ -54,7 +46,7 @@
 /* Library Imports */
 #import <Wordnik/WNConstants.h>
 #import <Wordnik/WNClient.h>
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 
 #import <Wordnik/WNWordDataSource.h>
 #import <Wordnik/WNWordNetworkDataSource.h>
@@ -64,100 +56,25 @@
  *
  * @section intro_sec Introduction
  *
- * The Wordnik data SDK provides a common API for accessing Wordnik's API and local data from iOS and Mac OS X
+ * The Wordnik Objective C Data and WordKit SDKs provide common APIs for accessing Wordnik's data from iOS and Mac OS X
  * applications.
  *
+ *
+ * You'll need a valid Wordnik API Key to use these libraries.  Please visit <a href="http://developer.wordnik.com">http://developer.wordnik.com</a> 
+ * to sign up for an API Key.  You should also visit our documentation at <a href="http://developer.wordnik.com/docs">http://developer.wordnik.com/docs</a>
+ * to see the details of how the APIs work.  While in most cases, the iOS SDKs will abstract the underlying Wordnik API from you, it's
+ * important to understand what is happening across the API.
+ * 
+ * Our most up-to-date documentation can be found at <a href="http://developer.wordnik.com/libraries/objective-c-sdk">http://developer.wordnik.com/libraries/objective-c-sdk</a> which
+ * provides code samples and recipes for using the SDK.
+ * 
+ * 
  * @section doc_sections Documentation Sections
- * - @subpage programming_guide
  * - @subpage error_handling
+ * 
+ * 
  */
 
-/**
- * @page programming_guide Wordnik Data SDK Programming Guide
- * @todo Document non-block delegate/observer methods to implement here.
- *
- * @section config Configuring the Wordnik Client
- *
- * @code
- * WNClientConfig *config = [WNClientConfig configWithAPIKey: @"MY_API_KEY"];
- * WNClient *client = [WNClient clientWithConfig: config];
- * @endcode
- *
- * @section auth Authentication
- *
- * @code
- * WNClientCredentials *creds = [WNClientCredentials credentialsWithUsername: @"user" password: @"password"];
- * [client loginWithCredentials: creds completionBlock: ^(NSError *error) {
- *     if (error != nil)
- *         NSLog(@"Authentication failed: %@", error);
- * }];
- * @endcode
- *
- * @section word_lookup Word Lookup
- *
- * @subsection single_word Single Word
- * @code
- *
- * // Create definition request for 'zebra', using the webster dictionary.
- * WNWordDefinitionRequest *definitionReq;
- *
- * NSSet *partsOfSpeech = [NSSet setWithObjects: [WNPartsOfSpeech noun], [WNPartOfSpeech verb], nil];
- * definitionReq = [WNWordDefinitionRequest requestWithDictionary: [WNDictionary websterDictionary]
- *                                                  partsOfSpeech: partsOfSpeech
- *                                                 maxResultCount: WNUnlimitedResultLength];
- *
- * WNWordRequest *req = [WNWordRequest requestWithWordString: @"zebra" 
- *                                      requestCanonicalForm: NO
- *                                           elementRequests: [NSArray arrayWithObject: definitionReq]];
- * 
- * // Issue the request
- * [client wordWithRequest: req completionBlock: ^(WNWord *word, NSError *error) {
- *     if (error != nil) {
- *          NSLog(@"Word lookup failed failed: %@", error);
- *          return;
- *     }
- *
- *     // Iterate over all noun definitions
- *     for (WNWordDefinition *definition in [word.definitionList definitionsForPartOfSpeech: [WNPartOfSpeech noun]]) {
- *          NSLog(@"Got definition: %@", definition.text);
- *     }
- * }];
- * @endcode
- *
- * @subsection multiple_words Multiple Words
- * @code
- *
- * // Create definition request
- * WNWordDefinitionRequest *definitionReq = [WNWordDefinitionRequest request];
- * NSArray *wordElementRequests = [NSArray arrayWithObject: ];
- *
- * // Create requests for 'zebra' and 'elephant'
- * WNWordRequest *zebra, *elephant;
- *
- * zebra = [WNWordRequest requestWithWordString: @"zebra" 
- *                         requestCanonicalForm: NO
- *                              elementRequests: wordElementRequests];
- * elephant = [WNWordRequest requestWithWordString: @"elephant" 
- *                            requestCanonicalForm: NO
- *                                 elementRequests: wordElementRequests];
- * 
- * // Issue the request
- * NSArray *wordRequests = [NSArray arrayWithObjects: zebra, elephant, nil];
- * [client wordsWithRequests: wordRequests completionBlock: ^(NSArray *words, NSError *error) {
- *     if (error != nil) {
- *          NSLog(@"Word lookup failed failed: %@", error);
- *          return;
- *     }
- *
- *     for (WNWord *word in words) {
- *         NSLog(@"Got word response for %@", word.wordString);
- *         for (WNWordDefinition *definition in word.definitionList.definitions)
- *             NSLog(@"Got definition: %@", definition.text);
- *         }
- *     }
- * }];
- * @endcode
- */
 
 /**
  * @page error_handling Error Handling Programming Guide

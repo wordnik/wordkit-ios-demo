@@ -7,7 +7,7 @@
 #import <Wordnik/WNConstants.h>
 #import <Wordnik/WNRequestTicket.h>
 
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 
 #import <Wordnik/WNClientObserver.h>
 #import <Wordnik/WNClientConfig.h>
@@ -18,8 +18,8 @@
 
 #import <Wordnik/WNRandomWordRequest.h>
 
-#import <Wordnik/WNAutocompleteWordRequest.h>
-#import <Wordnik/WNAutocompleteWordResponse.h>
+#import <Wordnik/WNWordSearchRequest.h>
+#import <Wordnik/WNWordSearchResponse.h>
 
 #import <Wordnik/WNWordOfTheDayResponse.h>
 
@@ -78,6 +78,9 @@ typedef enum {
 + (id) clientWithConfig: (WNClientConfig *) config;
 - (id) initWithClientConfig: (WNClientConfig *) config;
 
+/** The client config used during initialization */
+@property(readonly) WNClientConfig *clientConfig;
+
 #pragma mark API Usage
 
 - (WNRequestTicket *) requestAPIUsageStatus;
@@ -98,25 +101,26 @@ typedef enum {
 - (WNRequestTicket *) wordsWithRequests: (NSArray *) wordRequests;
 
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) wordWithRequest: (WNWordRequest *) request completionBlock: (void (^)(WNWordResponse *response, NSError *error)) completionBlock;
-- (WNRequestTicket *) wordsWithRequests: (NSArray *) wordRequests completionBlock: (void (^)(NSArray *responses, NSError *error)) completionBlock;
+- (WNRequestTicket *) wordWithRequest: (WNWordRequest *) request 
+					  completionBlock: (void (^)(WNWordResponse *response, NSError *error)) completionBlock;
+- (WNRequestTicket *) wordsWithRequests: (NSArray *) wordRequests 
+						completionBlock: (void (^)(NSArray *responses, NSError *error)) completionBlock;
 #endif
 
 
 #pragma mark Random Words
-
-- (WNRequestTicket *) randomWordStringsWithRequest: (WNRandomWordRequest *) request;
+- (WNRequestTicket *) randomWordsWithParameters:(WNRandomWordRequest *)request;
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) randomWordStringsWithRequest: (WNRandomWordRequest *) request
-                                   completionBlock: (void (^)(NSArray *wordStrings, NSError *error)) completionBlock; 
+- (WNRequestTicket *) randomWordsWithParameters: (WNRandomWordRequest *) request
+								completionBlock: (void (^)(NSArray *words, NSError *error)) completionBlock;
 #endif
 
 #pragma mark Autocomplete
 
-- (WNRequestTicket *) autocompletedWordsWithRequest: (WNAutocompleteWordRequest *) request;
+- (WNRequestTicket *) autocompletedWordsWithRequest: (WNWordSearchRequest *) request;
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) autocompletedWordsWithRequest: (WNAutocompleteWordRequest *) request
-                                    completionBlock: (void (^)(WNAutocompleteWordResponse *response, NSError *error)) completionBlock;
+- (WNRequestTicket *) autocompletedWordsWithRequest: (WNWordSearchRequest *) request
+                                    completionBlock: (void (^)(WNWordSearchResponse *response, NSError *error)) completionBlock;
 #endif
 
 
@@ -147,22 +151,22 @@ typedef enum {
 - (WNRequestTicket *) requestAllWordListInfoWithCompletionBlock: (void (^)(NSArray *wordListsInfo, NSError *error)) completionBlock;
 #endif
 
-- (WNRequestTicket *) wordStringsFromListWithIdentifier: (WNWordListIdentifier *) identifier;
+- (WNRequestTicket *) wordsFromListWithIdentifier: (WNWordListIdentifier *) identifier;
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) wordStringsFromListWithIdentifier: (WNWordListIdentifier *) identifier
-                                        completionBlock: (void (^)(NSArray *wordStrings, NSError *error)) completionBlock;
+- (WNRequestTicket *) wordsFromListWithIdentifier: (WNWordListIdentifier *) identifier
+                                        completionBlock: (void (^)(NSArray *words, NSError *error)) completionBlock;
 #endif
 
-- (WNRequestTicket *) addWordString: (NSString *) wordString toListWithIdentifier: (WNWordListIdentifier *) identifier;
+- (WNRequestTicket *) addWord: (NSString *) word toListWithIdentifier: (WNWordListIdentifier *) identifier;
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) addWordString: (NSString *) wordString
+- (WNRequestTicket *) addWord: (NSString *) word
                toListWithIdentifier: (WNWordListIdentifier *) identifier
                     completionBlock: (void (^)(NSError *error)) completionBlock;
 #endif
 
-- (WNRequestTicket *) removeWordString: (NSString *) wordString fromListWithIdentifier: (WNWordListIdentifier *) identifier;
+- (WNRequestTicket *) removeWord: (NSString *) word fromListWithIdentifier: (WNWordListIdentifier *) identifier;
 #if WN_BLOCKS_AVAILABLE
-- (WNRequestTicket *) removeWordString: (NSString *) wordString
+- (WNRequestTicket *) removeWord: (NSString *) word
                 fromListWithIdentifier: (WNWordListIdentifier *) identifier
                        completionBlock: (void (^)(NSError *error)) completionBlock;
 #endif

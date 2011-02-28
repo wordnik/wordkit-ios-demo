@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Wordnik SDK</string>
 	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
+	<string>Wordnik SDK Documentation</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon.png</string>

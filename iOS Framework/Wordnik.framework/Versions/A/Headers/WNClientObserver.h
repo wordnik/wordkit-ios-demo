@@ -7,7 +7,7 @@
 #import <Wordnik/WNRequestTicket.h>
 #import <Wordnik/WNWordResponse.h>
 
-#import <Wordnik/WNAutocompleteWordResponse.h>
+#import <Wordnik/WNWordSearchResponse.h>
 #import <Wordnik/WNWordOfTheDayResponse.h>
 
 #import <Wordnik/WNWordListCreateResponse.h>
@@ -107,10 +107,10 @@
  * Sent when a random word request has succeeded.
  *
  * @param client The sending client.
- * @param wordStrings Array of random word strings.
+ * @param words Array of random words.
  * @param requestTicket The request ticket corresponding to the word request.
  */
-- (void) client: (WNClient *) client didReceiveRandomWordStrings: (NSArray *) wordStrings requestTicket: (WNRequestTicket *) requestTicket;
+- (void) client: (WNClient *) client didReceiveRandomWords: (NSArray *) words requestTicket: (WNRequestTicket *) requestTicket;
 
 /**
  * Sent when a random word request has failed.
@@ -131,7 +131,7 @@
  * @param response The autocomplete response.
  * @param requestTicket The request ticket corresponding to the autocomplete word request.
  */
-- (void) client: (WNClient *) client didReceiveAutocompleteWordResponse: (WNAutocompleteWordResponse *) response requestTicket: (WNRequestTicket *) requestTicket;
+- (void) client: (WNClient *) client didReceiveAutocompleteWordResponse: (WNWordSearchResponse *) response requestTicket: (WNRequestTicket *) requestTicket;
 
 /**
  * Sent when an autocomplete request has failed.
@@ -228,12 +228,12 @@
  * Sent when the full list of word strings for a given list has been received.
  *
  * @param client The sending client.
- * @param wordStrings The received word strings.
+ * @param words The received word strings.
  * @param identifier The list identifier.
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    didReceiveWordStrings: (NSArray *) wordStrings 
+    didReceiveWords: (NSArray *) words 
     forListWithIdentifier: (WNWordListIdentifier *) identifier
             requestTicket: (WNRequestTicket *) requestTicket;
 
@@ -246,7 +246,7 @@
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    wordStringsRequestDidFailWithError: (NSError *) error 
+    wordRequestDidFailWithError: (NSError *) error 
                  forListWithIdentifier: (WNWordListIdentifier *) identifier
                          requestTicket: (WNRequestTicket *) requestTicket;
 
@@ -255,12 +255,12 @@
  * Sent when a word string has successfully been added to a word list.
  *
  * @param client The sending client.
- * @param wordString The added word string
+ * @param word The added word string
  * @param identifier The list identifier.
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    didAddWordString: (NSString *) wordString
+    didAddWord: (NSString *) word
 toListWithIdentifier: (WNWordListIdentifier *) identifier
        requestTicket: (WNRequestTicket *) requestTicket;
 
@@ -268,13 +268,13 @@ toListWithIdentifier: (WNWordListIdentifier *) identifier
  * Sent when a failure occurs adding a word string to a word list.
  *
  * @param client The sending client.
- * @param wordString The word string the client attempted to add.
+ * @param word The word string the client attempted to add.
  * @param error An error in the WNErrorDomain describing the failure.
  * @param identifier The list identifier.
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    didFailToAddWordString: (NSString *) wordString
+    didFailToAddWord: (NSString *) word
                  withError: (NSError *) error
       toListWithIdentifier: (WNWordListIdentifier *) identifier
              requestTicket: (WNRequestTicket *) requestTicket;
@@ -285,12 +285,12 @@ toListWithIdentifier: (WNWordListIdentifier *) identifier
  * Sent when a word string has successfully been removed from a word list.
  *
  * @param client The sending client.
- * @param wordString The added word string
+ * @param word The added word string
  * @param identifier The list identifier.
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    didRemoveWordString: (NSString *) wordString
+    didRemoveWord: (NSString *) word
  fromListWithIdentifier: (WNWordListIdentifier *) identifier
           requestTicket: (WNRequestTicket *) requestTicket;
 
@@ -298,13 +298,13 @@ toListWithIdentifier: (WNWordListIdentifier *) identifier
  * Sent when a failure occurs removing a word string from a word list.
  *
  * @param client The sending client.
- * @param wordString The word string the client attempted to remove.
+ * @param word The word string the client attempted to remove.
  * @param error An error in the WNErrorDomain describing the failure.
  * @param identifier The list identifier.
  * @param requestTicket The request ticket corresponding to the word string request.
  */
 - (void) client: (WNClient *) client
-    didFailToRemoveWordString: (NSString *) wordString
+    didFailToRemoveWord: (NSString *) word
                     withError: (NSError *) error
        fromListWithIdentifier: (WNWordListIdentifier *) identifier
                 requestTicket: (WNRequestTicket *) requestTicket;

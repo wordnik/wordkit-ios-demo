@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Wordnik/WNWord.h>
+#import <Wordnik/WNWordObject.h>
 
 #ifdef WORDNIK_PRIVATE
 #import <Wordnik/WNRestResource.h>
@@ -19,7 +19,7 @@
  *
  * @see WNWordDefinitionRequest
  * @see WNWordBigramRequest
- * @see WNWordExampleSentenceRequest
+ * @see WNWordExampleRequest
  * @see WNWordRelatedWordsRequest
  * @see WNWordUsageFrequencyRequest
  * @see WNWordPunctuationFactorRequest
@@ -36,7 +36,7 @@
 
 
 /**
- * Return a new WNWord instance formed by parsing and applying the contents of @a response to the existing
+ * Return a new WNWordObject instance formed by parsing and applying the contents of @a response to the existing
  * @a word value. The provided response <em>MUST NOT</em> be an error response.
  *
  * If an error occurs parsing the response, nil should be returned, and an error in the WNErrorDomain 
@@ -48,8 +48,8 @@
  * @param outError If an error occurs parsing the JSON object, upon return contains
  * an error in the WNErrorDomain that describes the problem. Pass NULL if you do not want error information.
  */
-- (WNWord *) wordByApplyingRestResponse: (WNRestResponse *) response 
-                                 toWord: (WNWord *) word 
+- (WNWordObject *) wordByApplyingRestResponse: (WNRestResponse *) response 
+                                 toWord: (WNWordObject *) word 
                                   error: (NSError **) outError;
 
 /**

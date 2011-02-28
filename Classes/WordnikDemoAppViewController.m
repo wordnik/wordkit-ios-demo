@@ -146,8 +146,8 @@
     position = [self.view convertPoint: position fromView: _wordnikWebView];
 
     /* Create our view controllers */
-    WNDefinitionViewController *vc = [[[WNDefinitionViewController alloc] initWithWordString: selected
-                                                                                  dataSource: _dataSource] autorelease];
+    WNDefinitionViewController *vc = [[[WNDefinitionViewController alloc] initWithWord: selected
+																			dataSource: _dataSource] autorelease];
     vc.delegate = self;
 
     UINavigationController *navVC = [[[UINavigationController alloc] initWithRootViewController: vc] autorelease];
